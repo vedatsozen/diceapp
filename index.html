@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+<h1>Money You Have</h1>
+<div id="moneyid"></div>
+<button onclick="finishgame()">Get Money You Have</button>
+<div id="container">
+    <div id="zar1" class="zarlar"></div>
+    <div id="zar2" class="zarlar"></div>
+</div>
+<button onclick="zarat()">Dice</button>
+
+<div id="slogan"></div>
+</body>
+<script>
+
+alert("Welcome to Dice Game. You have 1000$ at beginning. If your dices are equal more than 10 at every dice , you get 1000$. If not, you lose 100$ at every dice. Good Luck.");
+
+let yourMoney = 1000 ;
+
+document.getElementById("moneyid").innerHTML = yourMoney + "$" ;
+
+function zarat() {
+
+    document.getElementById("slogan").innerHTML = "" ;
+
+    const zar1 = Math.floor(Math.random() * 6) + 1 ; 
+    const zar2 = Math.floor(Math.random() * 6) + 1 ; 
+    
+
+    document.getElementById("zar1").innerHTML = zar1 ;
+    document.getElementById("zar2").innerHTML = zar2 ;
+
+    const toplam = zar1 + zar2 ;
+
+   
+
+    if ( toplam >= 10 ) { 
+        
+    setTimeout(youearned, 100)
+    
+    yourMoney = yourMoney + 1000 ;
+
+    document.getElementById("moneyid").innerHTML = yourMoney + "$" ;
+    
+    }
+
+    else if ( toplam < 10 ) {
+
+    setTimeout(youlost, 100)
+
+    yourMoney = yourMoney - 100 ;
+
+    document.getElementById("moneyid").innerHTML = yourMoney + "$" ;
+
+    }
+
+    if ( yourMoney <= 0 ) { 
+        
+        alert("YOU LOST YOUR ALL")
+
+        document.body.innerHTML = "";
+        document.body.style.backgroundColor ="red";
+        const newDiv = document.createElement("div");
+        const newButton = document.createElement("button");
+        document.body.appendChild(newDiv);
+        document.body.appendChild(newButton);
+        newDiv.innerHTML = "STOP GAMBLING!!!";
+        newDiv.classList.add("newDivclass");
+        newButton.innerHTML = "I want to play again."
+
+        newButton.addEventListener("click", function() {
+        window.location.reload();
+        })
+    
+    
+    }
+
+  
+}
+
+function finishgame() {
+
+        document.body.innerHTML = "";
+        document.body.style.backgroundColor ="yellowgreen";
+        const newDiv = document.createElement("div");
+        const newButton = document.createElement("button");
+        document.body.appendChild(newDiv);
+        document.body.appendChild(newButton);
+        newDiv.innerHTML = "CONGRATULATIONS.<br> YOU EARNED " + yourMoney +"$" ;
+        newDiv.classList.add("newDivclass");
+        newButton.innerHTML = "Close Page and Join to Life";
+
+        newButton.addEventListener("click", function() {
+
+        window.close();
+
+        })
+        
+
+
+}
+
+function youlost() {
+
+document.getElementById("slogan").style.color = "red";
+document.getElementById("slogan").innerHTML = "Unfortunately. You lost 100$." ;
+
+}
+
+function youearned () {
+
+document.getElementById("slogan").style.color = "green";
+document.getElementById("slogan").innerHTML = "Congratulations. You earned 1000$." ;
+
+}
+
+</script>
+</html>

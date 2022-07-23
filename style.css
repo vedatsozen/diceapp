@@ -1,0 +1,160 @@
+@media only screen and (min-width:480px) {
+
+body {
+    background-color: lightcyan;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#container {
+    height:200px;
+    width:fit-content;
+    margin: auto;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding:2px;
+    box-sizing: border-box;
+    margin-top:10px;
+}
+
+.zarlar {
+    width:150px;
+    height: 100%;
+    background-color: yellowgreen;
+    color: lightcyan;
+    margin-right: 2px;
+    font-size: 100px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#zar2 {
+    margin-right: 0px;
+}
+
+button {
+    margin: auto;
+    margin-top: 5px;
+    cursor: pointer;
+
+}
+
+#slogan {
+    font-size:60px;
+    width:fit-content;
+    height: fit-content;
+    margin: auto;
+}
+
+#moneyid {
+    font-size: 60px;
+    width:200px;
+    height:80px;
+    padding: 10px;
+    margin:auto;
+    margin-top: 2px;
+    color: white;
+    background-color: green;
+    border:5px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newDivclass {
+
+    color: white;
+    font-size: 80px;
+    margin-top: 200px;
+
+    }
+
+}
+
+/* FOR MOBILE */
+
+@media only screen and (max-width:480px) {
+
+    body {
+        background-color: lightcyan;
+        text-align: center;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    
+    #container {
+        height:150px;
+        max-width: fit-content;
+        width:90vw;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content:center;
+        align-items: center;
+        padding:2px;
+        box-sizing: border-box;
+        margin-top:10px;
+    }
+    
+    .zarlar {
+        width:150px;
+        height: 100%;
+        background-color: yellowgreen;
+        color: lightcyan;
+        margin-right: 2px;
+        font-size: 100px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #zar2 {
+        margin-right: 0px;
+    }
+    
+    button {
+        margin: auto;
+        margin-top: 5px;
+        cursor: pointer;
+    
+    }
+    
+    #slogan {
+        font-size:30px;
+        width:fit-content;
+        height: fit-content;
+        margin: auto;
+    }
+    
+    #moneyid {
+        font-size: 40px;
+        width:90vw;
+        height:60px;
+        padding: 10px;
+        box-sizing: border-box;
+        margin:auto;
+        margin-top: 2px;
+        color: white;
+        background-color: green;
+        border:5px solid white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .newDivclass {
+
+    color: white;
+    font-size:20px;
+    margin-top: 200px;
+
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+    
+    }
